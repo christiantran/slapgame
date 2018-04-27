@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/game.css">
     <title>Slap Game</title>
 </head>
 <body>
 
-    <script src="game.js"></script>   
+    <header>
+            <span>Name:<span id="targetName">Frank</span></span>
+            <span>Health:<span id="health">--</span></span>
+            <span>Hits:<span id="hits">--</span></span>
+
+    </header>
+
+        <img src="https://placehold.it/200x200" alt="">
+    
+    <footer>
+        <button onClick="slap()">Slap</button>
+        <button onClick="punch()">Punch</button>
+        <button onClick="kick()">Kick</button>
+    </footer>
+
+        <script src="game.js"></script>   
 </body>
 </html>
