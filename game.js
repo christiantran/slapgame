@@ -13,18 +13,33 @@ function Target(targetName){
 var myTarget = new Target();
 // myTarget.items.push();
 
-//myTarget.items.push(items.zapper)
-var items = {
+function giveItem(itemName){
 
-    zapper: new Item("Zapper",2.5,"Electrocute those flys!"),
-    swatter: new Item("Swatter",0.5,"Swat those annoyances away!"),
-    newspaper: new Item("Newspaper",1.5,"Smash it!")
+    myTarget.items.push(killerItems[itemName]);
+    myTarget.items.push(killerItems[itemName]);
+    myTarget.items.push(killerItems[itemName]);
 }
 
-function Options(name, modifier, description){
-    this.name = name;
+var killerItems = {
+
+    zapper: new Items("Zapper", 1,"Electrocute those flys!"),
+    swatter: new Items("Swatter", 0.75,"Swat those annoyances away!"),
+    newspaper: new Items("Newspaper", 0.5,"Smash it!")
+}
+
+function Items(name, modifier, description){
+    this.itemName = name;
     this.modifier = modifier;
     this.description = description;
+}
+
+function addMods(){
+    var totalMods = 1
+    for (var i = 0; i< myTarget.items.length; i++){
+        var item = myTarget.items[i];
+        totalMods += item.modifier;
+    }
+        return totalMods
 }
 
 function update() {
@@ -36,23 +51,23 @@ function update() {
 update()
 
 function slap() {
-    myTarget.health--
-    myTarget.hits++
+    myTarget.health -= 1 * addMods();
+    myTarget.hits++;
     //alert(health)
 
     update()
 }
 
 function punch() {
-    myTarget.health = (myTarget.health-5)
-    myTarget.hits++
+    myTarget.health -= 5 * addMods();
+    myTarget.hits++;
 
     update()
 }
 
 function kick() {
-    myTarget.health = (myTarget.health-10)
-    myTarget.hits++
+    myTarget.health -= 10 * addMods();
+    myTarget.hits++;
 
     update()
 }
