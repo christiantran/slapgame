@@ -13,36 +13,58 @@
 
 <body>
 
-    <header>
+    <header class="container-fluid">
 
-        <span>Name:
-            <span id="targetName">Frank the Fly</span>
-        </span>
-        <span>Health:
-            <span id="health">--</span>
-        </span>
-        <span>Hits:
-            <span id="hits">--</span>
-        </span>
+        <div class="row">
+            <div class="col-12 text-center">
+
+                <span>Name:
+                    <span id="targetName">Frank the Fly</span>
+
+                </span>
+            </div>
+        </div>
 
     </header>
 
-    <img src="https://placehold.it/200x200" alt="">
+    <section class="container-fluid">
 
-    <section>
+        <div class="row mt-5 mb-5">
+            <div class="col-12 text-center">
+                <span>Health:
+                    <span id="health">--</span>
+                </span>
+                <span>Hits:
+                    <span id="hits">--</span>
+                </span>
+            </div>
+        </div>
 
-        <button onClick="slap()">Slap</button>
-        <button onClick="punch()">Punch</button>
-        <button onClick="kick()">Kick</button>
+        <div class="row mt-5 mb-5">
+            <div class="col-12 text-center">
+                <img src="assets/fly.jpg" height="200px" width="200px" alt="">
+            </div>
+        </div>
+
+        <div class="row mt-1 mb-1"></div>
+        <div class="col-12 text-center">
+            <button onClick="slap()">Slap</button>
+            <button onClick="punch()">Punch</button>
+            <button onClick="kick()">Kick</button>
+        </div>
+        </div>
 
     </section>
 
     <footer>
 
         <div id="items">
-            <button onClick="giveItems('zapper')">Zapper</button>
-            <button onClick="giveItems('swatter')">Swatter</button>
-            <button onClick="giveItems('newspaper')">Newspaper</button>
+            <img src="assets/zapper2.jpg" height="100px" width="100px" alt="">
+            <button onClick="giveItem('zapper')">Zapper</button>
+            <img src="assets/swatter-295234_960_720.png" height="50px" width="100px" alt="">
+            <button onClick="giveItem('swatter')">Swatter</button>
+            <img src="assets/newspaper.png" height="100px" width="50px" alt="">
+            <button onClick="giveItem('newspaper')">Newspaper</button>
         </div>
 
     </footer>

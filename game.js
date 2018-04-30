@@ -22,7 +22,7 @@ function giveItem(itemName){
 
 var killerItems = {
 
-    zapper: new Items("Zapper", 1,"Electrocute those flys!"),
+    zapper: new Items("Zapper", 1.5,"Electrocute those flys!"),
     swatter: new Items("Swatter", 0.75,"Swat those annoyances away!"),
     newspaper: new Items("Newspaper", 0.5,"Smash it!")
 }
@@ -40,6 +40,7 @@ function addMods(){
         totalMods += item.modifier;
     }
         return totalMods
+
 }
 
 function update() {
