@@ -22,9 +22,9 @@ function giveItem(itemName){
 
 var killerItems = {
 
-    zapper: new Items("Zapper", 1.5,"Electrocute those flys!"),
-    swatter: new Items("Swatter", 0.75,"Swat those annoyances away!"),
-    newspaper: new Items("Newspaper", 0.5,"Smash it!")
+    zapper: new Items("Zapper", 0.75,"Electrocute those flys!"),
+    swatter: new Items("Swatter", 0.5,"Swat those annoyances away!"),
+    newspaper: new Items("Newspaper", 0.25,"Smash it!")
 }
 
 function Items(name, modifier, description){
