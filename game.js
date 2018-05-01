@@ -14,7 +14,7 @@ var myTarget = new Target();
 // myTarget.items.push();
 
 function giveItem(itemName){
-
+    //Why push the same item 3 times for each button press?
     myTarget.items.push(killerItems[itemName]);
     myTarget.items.push(killerItems[itemName]);
     myTarget.items.push(killerItems[itemName]);
@@ -50,7 +50,7 @@ function update() {
 }
 
 update()
-
+//how could you condense these to one function, similar to the give items function? something like function attack('punch')
 function slap() {
     myTarget.health -= 1 * addMods();
     myTarget.hits++;
