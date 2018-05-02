@@ -14,7 +14,6 @@ var myTarget = new Target();
 // myTarget.items.push();
 
 function giveItem(itemName){
-
     myTarget.items.push(killerItems[itemName]);
 }
 
