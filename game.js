@@ -16,8 +16,6 @@ var myTarget = new Target();
 function giveItem(itemName){
 
     myTarget.items.push(killerItems[itemName]);
-    myTarget.items.push(killerItems[itemName]);
-    myTarget.items.push(killerItems[itemName]);
 }
 
 var killerItems = {
@@ -50,6 +48,9 @@ function update() {
 }
 
 update()
+
+//how could you condense these to one function, similar to the give items function? something like 
+//function attack('punch')
 
 function slap() {
     myTarget.health -= 1 * addMods();
